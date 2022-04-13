@@ -95,7 +95,7 @@ resource "null_resource" "configure-cat-app" {
       host        = google_compute_instance.hashicat.network_interface.0.access_config.0.nat_ip
     }
   }
-
+  
   provisioner "remote-exec" {
     inline = [
       "sudo apt -y update",
